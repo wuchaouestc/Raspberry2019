@@ -1,2 +1,62 @@
 
+sudo passwd root
+系统会提示输入两遍的root密码，输入你想设的密码即可
+
+把根目录扩大到整个SD卡
+sudo raspi-config
+Advanced Options
+选择Expand Filesystem，将根目录扩展到这个SD卡，
+充分利用SD卡的存储空间。
+退出设置界面，重启树莓派。
+sudo reboot
+
+
+
+sudo apt-get install ttf-wqy-zenhei
+将安装文泉驿的开源中文字体
+sudo apt-get install scim-pinyin
+Linux下的中文输入法SCIM
+快捷键是Ctrl+空格。或者直接点击屏幕右上角的输入法图标选择。
+
+配置中文操作系统
+sudo raspi-config  
+选择Internationalisation Options-->Change Locale-->zh_CN.UTF-8-->OK，然后重启系统，设置为中文操作系统。
+
+
+sudo nano  /etc/apt/sources.list 
+将初始化中的代码中默认的官方软件源注释掉 # 添加下面的软件源（中国科技大学的软件源 ） 
+deb http://mirrors.ustc.edu.cn/raspbian/raspbian/ stretch main contrib non-free rpi
+保存并退出：Ctrl+X   按Y（保存数据）  再按回车
+
+sudo nano  /etc/apt/sources.list.d/raspi.list 
+将初始化中的代码中默认的官方软件源注释掉 # 添加下面的软件源 
+deb http://mirrors.ustc.edu.cn/archive.raspberrypi.org/ stretch main ui
+
+3.更新本地的软件源
+sudo apt-get update 
+sudo apt-get dist-upgrade -y
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
