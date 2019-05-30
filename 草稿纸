@@ -36,9 +36,18 @@ deb http://mirrors.ustc.edu.cn/archive.raspberrypi.org/ stretch main ui
 sudo apt-get update 
 sudo apt-get dist-upgrade -y
 
+-----------------------------------------------
+shell脚本
 
-
-
+#!/bin/bash
+#monitor available disk space
+#提取本服务器的IP地址信息  
+ 
+SPACE=` df -hP | awk '{print int($5)}'`
+if [ $SPACE -ge 90 ]
+then
+  echo " 服务器 磁盘空间 使用率已经超过90%，请及时处理。" > ~/warning.log
+fi
 
 
 
