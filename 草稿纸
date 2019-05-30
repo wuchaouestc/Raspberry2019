@@ -49,6 +49,16 @@ then
   echo " 服务器 磁盘空间 使用率已经超过90%，请及时处理。" > ~/warning.log
 fi
 
+------------------------------------------------
+python依赖环境
+$ sudo apt-get install build-essential libsqlite3-dev sqlite3 bzip2 libbz2-dev
+下载python3.6版本源码并解压
+$ wget https://www.python.org/ftp/python/3.6.1/Python-3.6.1.tgz
+$ tar zxvf Python-3.6.1.tgz
+$ cd Python-3.6.1
+ 
+编译安装
+$ sudo ./configure && sudo make && sudo make install
 
 
 
