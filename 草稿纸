@@ -84,6 +84,8 @@ import time
 
 pin = 40                         ## 使用40号引脚
 GPIO.setmode(GPIO.BOARD)        ## 使用BOARD引脚编号，此外还有 GPIO.BCM
+
+GPIO.setwarnings(False)        # fix bug 1    
 GPIO.setup(pin, GPIO.OUT)       ## 设置40号引脚输出
 
 while:                  ## 重复
