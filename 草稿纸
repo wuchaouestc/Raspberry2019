@@ -60,6 +60,60 @@ $ cd Python-3.6.1
 编译安装
 $ sudo ./configure && sudo make && sudo make install
 
+------------------------------------------------------------
+GPIO
+
+安装 python-dev
+sudo apt-get install python-dev    
+
+$ sudo apt-get update
+$ sudo apt-get dist-update
+$ sudo apt-get install python-rpi.gpio
+
+源程序中安装
+$ wget http://raspberry-gpio-python.googlecode.com/files/RPi.GPIO-0.6.3.tar.gz
+$ sudo tar -zxvf RPi.GPIO-0.6.3.tar.gz
+$ cd RPi.GPIO-0.6.3
+$ python setup.py install
+
+控制led.py
+
+# -*- coding: utf-8 -*- 
+import RPi.GPIO as GPIO
+import time
+
+pin = 40                         ## 使用40号引脚
+GPIO.setmode(GPIO.BOARD)        ## 使用BOARD引脚编号，此外还有 GPIO.BCM
+
+GPIO.setwarnings(False)        # fix bug 1    
+GPIO.setup(pin, GPIO.OUT)       ## 设置40号引脚输出
+
+while:                  ## 重复
+    GPIO.output(pin, GPIO.HIGH)   ## 打开 GPIO 引脚（HIGH）
+    time.sleep(1)               ## 等1秒
+    GPIO.output(pin, GPIO.LOW)  ## 关闭 GPIO 引脚（LOW）
+    time.sleep(1)               ## 等1秒
+
+PIO.cleanup()                   ## 清除
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
