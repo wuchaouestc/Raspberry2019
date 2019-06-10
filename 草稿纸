@@ -96,16 +96,19 @@ while:                  ## 重复
 
 PIO.cleanup()                   ## 清除
 
+--------------------------------------------------------------
+git clone git://git.drogon.net/wiringPi
+cd wiringPi
+./build
 
 
+unzip cpu_show_uptime.zip
+cd  ~/cpu_show_uptime
+cc -o cpushow_uptime pcd8544_rpi.c PCD8544.c  -L/usr/local/lib -lwiringPi
 
-
-
-
-
-
-
-
+pcd8544_rpi.c 和PCD8544.c 是当前目录下的源程序文件，-L/usr/local/lib和-lwiringPi是引用库文件。
+输入以下命令运行程序
+sudo ./cpushow_uptime
 
 
 
