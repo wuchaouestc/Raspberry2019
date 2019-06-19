@@ -1,4 +1,34 @@
 
+
+pip install librosa
+
+>>> import librosa
+>>> # Load a wav file
+>>> y, sr = librosa.load('./beat.wav', sr=None)
+>>> sr
+44100
+
+>>> import librosa
+>>> # Load a wav file
+>>> y, sr = librosa.load('./beat.wav', sr=None)
+>>> # extract mfcc feature
+>>> mfccs = librosa.feature.mfcc(y=y, sr=sr, n_mfcc=40)
+>>> mfccs.shape
+(40, 194)
+
+>>> import librosa
+>>> import librosa.display
+>>> # Load a wav file
+>>> y, sr = librosa.load('./beat.wav', sr=None)
+>>> # plot a wavform
+>>> plt.figure()
+>>> librosa.display.waveplot(y, sr)
+>>> plt.title('Beat wavform')
+>>> plt.show()
+
+
+
+---------------------------------------------------------------------------
 sudo passwd root
 系统会提示输入两遍的root密码，输入你想设的密码即可
 
