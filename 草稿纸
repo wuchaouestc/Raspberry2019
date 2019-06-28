@@ -1,5 +1,18 @@
 
 
+git clone https://github.com/respeaker/seeed-voicecard.git
+cd seeed-voicecard #下载声卡驱动
+sudo ./install.sh #安装声卡驱动
+reboot  #重启 
+
+sudo arecord -D hw:1,0 -f S32_LE -r 16000 -c 2 test.wav
+-D : 设备
+-r : 频率
+
+
+
+--------------------------------------------------------------------------
+
 pip install librosa
 
 >>> import librosa
