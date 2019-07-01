@@ -12,6 +12,14 @@
 《剑指Offer》面试题Python实现
 https://github.com/JushuangQiao/Python-Offer
 
+wm8960声卡
+http://wiki.seeedstudio.com/cn/ReSpeaker_2_Mics_Pi_HAT/
+https://github.com/Baidu-AIP/speech-demo
+
+
+
+
+
 
 
 
